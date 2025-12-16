@@ -1,0 +1,40 @@
+{
+  "name": "@mastra/braintrust-example",
+  "version": "0.1.0",
+  "description": "Braintrust observability example with Mastra",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "../../../mastra-ai/0.x/packages/cli/dist/index.js dev",
+    "test:mem-leak": "tsx src/mastra/test-mem-leak.ts",
+    "test:mem-leak:gc": "node --expose-gc --import tsx src/mastra/test-mem-leak.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@ai-sdk/provider-v5": "npm:@ai-sdk/provider@2.0.0",
+    "@mastra/braintrust": "latest",
+    "@mastra/core": "latest",
+    "@mastra/langfuse": "latest",
+    "@mastra/libsql": "latest",
+    "@mastra/memory": "latest",
+    "@mastra/observability": "latest",
+    "@sentry/node": "^8.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.25.76"
+  },
+  "pnpm": {
+    "overrides": {
+      "@mastra/core": "link:../../../mastra-ai/0.x/packages/core",
+      "@mastra/observability": "link:../../../mastra-ai/0.x/observability/mastra",
+      "@mastra/langfuse": "link:../../../mastra-ai/0.x/observability/langfuse",
+      "@mastra/libsql": "link:../../../mastra-ai/0.x/stores/libsql",
+      "@mastra/braintrust": "link:../../../mastra-ai/0.x/observability/braintrust",
+      "@mastra/memory": "link:../../../mastra-ai/0.x/packages/memory"
+    }
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
+}

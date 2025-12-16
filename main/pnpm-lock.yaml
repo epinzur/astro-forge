@@ -1,0 +1,82 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+overrides:
+  '@mastra/arize': link:../../../mastra-ai/mastra/observability/arize
+  '@mastra/braintrust': link:../../../mastra-ai/mastra/observability/braintrust
+  '@mastra/core': link:../../../mastra-ai/mastra/packages/core
+  '@mastra/langfuse': link:../../../mastra-ai/mastra/observability/langfuse
+  '@mastra/langsmith': link:../../../mastra-ai/mastra/observability/langsmith
+  '@mastra/libsql': link:../../../mastra-ai/mastra/stores/libsql
+  '@mastra/observability': link:../../../mastra-ai/mastra/observability/mastra
+  '@mastra/posthog': link:../../../mastra-ai/mastra/observability/posthog
+
+importers:
+
+  .:
+    dependencies:
+      '@mastra/arize':
+        specifier: link:../../../mastra-ai/mastra/observability/arize
+        version: link:../../../mastra-ai/mastra/observability/arize
+      '@mastra/braintrust':
+        specifier: link:../../../mastra-ai/mastra/observability/braintrust
+        version: link:../../../mastra-ai/mastra/observability/braintrust
+      '@mastra/core':
+        specifier: link:../../../mastra-ai/mastra/packages/core
+        version: link:../../../mastra-ai/mastra/packages/core
+      '@mastra/langfuse':
+        specifier: link:../../../mastra-ai/mastra/observability/langfuse
+        version: link:../../../mastra-ai/mastra/observability/langfuse
+      '@mastra/langsmith':
+        specifier: link:../../../mastra-ai/mastra/observability/langsmith
+        version: link:../../../mastra-ai/mastra/observability/langsmith
+      '@mastra/libsql':
+        specifier: link:../../../mastra-ai/mastra/stores/libsql
+        version: link:../../../mastra-ai/mastra/stores/libsql
+      '@mastra/observability':
+        specifier: link:../../../mastra-ai/mastra/observability/mastra
+        version: link:../../../mastra-ai/mastra/observability/mastra
+      '@mastra/posthog':
+        specifier: link:../../../mastra-ai/mastra/observability/posthog
+        version: link:../../../mastra-ai/mastra/observability/posthog
+      zod:
+        specifier: ^3.25.76
+        version: 3.25.76
+    devDependencies:
+      '@types/node':
+        specifier: ^22.10.0
+        version: 22.19.1
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+packages:
+
+  '@types/node@22.19.1':
+    resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
+
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
+snapshots:
+
+  '@types/node@22.19.1':
+    dependencies:
+      undici-types: 6.21.0
+
+  typescript@5.9.3: {}
+
+  undici-types@6.21.0: {}
+
+  zod@3.25.76: {}

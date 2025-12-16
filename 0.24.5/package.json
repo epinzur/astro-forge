@@ -1,0 +1,27 @@
+{
+  "name": "@mastra/mem-leak-test-0.24.5",
+  "version": "0.1.0",
+  "description": "Memory leak test for Mastra 0.24.5",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:mem-leak": "tsx src/mastra/test-mem-leak.ts",
+    "test:mem-leak:gc": "node --expose-gc --import tsx src/mastra/test-mem-leak.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@ai-sdk/provider-v5": "npm:@ai-sdk/provider@2.0.0",
+    "@mastra/core": "0.24.5",
+    "@mastra/langfuse": "0.2.3",
+    "@mastra/libsql": "0.16.2",
+    "@mastra/memory": "0.15.11",
+    "@sentry/node": "^8.0.0",
+    "dotenv": "^16.4.5",
+    "zod": "3.25.76"
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "@mastra/braintrust-example",
+  "version": "0.1.0",
+  "description": "Braintrust observability example with Mastra",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "../../../mastra-ai/mastra/packages/cli/dist/index.js dev"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@mastra/arize": "latest",
+    "@mastra/braintrust": "latest",
+    "@mastra/langfuse": "latest",
+    "@mastra/langsmith": "latest",
+    "@mastra/libsql": "latest",
+    "@mastra/core": "latest",
+    "@mastra/observability": "latest",
+    "@mastra/posthog": "latest",
+    "zod": "^3.25.76"
+  },
+  "pnpm": {
+    "overrides": {
+      "@mastra/arize": "link:../../../mastra-ai/mastra/observability/arize",
+      "@mastra/braintrust": "link:../../../mastra-ai/mastra/observability/braintrust",
+      "@mastra/core": "link:../../../mastra-ai/mastra/packages/core",
+      "@mastra/langfuse": "link:../../../mastra-ai/mastra/observability/langfuse",
+      "@mastra/langsmith": "link:../../../mastra-ai/mastra/observability/langsmith",
+      "@mastra/libsql": "link:../../../mastra-ai/mastra/stores/libsql",
+      "@mastra/observability": "link:../../../mastra-ai/mastra/observability/mastra",
+      "@mastra/posthog": "link:../../../mastra-ai/mastra/observability/posthog"
+    }
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
+}
